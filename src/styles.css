@@ -1,0 +1,11 @@
+html,
+body {
+    height: 100%;
+}
+
+#sidebar {
+    height: 100%;
+    /* el tamaño minimo va a ser todo lo que este en la pantalla */
+    min-height: 100vh;
+    min-width: 180px;
+}

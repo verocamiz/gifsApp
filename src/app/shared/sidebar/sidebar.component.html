@@ -1,0 +1,40 @@
+<div class="border-right p-3" style="background-color:#92d33dd8" id="sidebar">
+    <div class="row">
+        <div class="col">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <i class="fas fa-cat  fa-2x"> </i>
+                <h3 class="fs-4"> Nahe's Gifs</h3>
+
+            </a>
+        </div>
+    </div>
+
+    <hr class="text-white">
+    <ul class="nav nav-pills flex-column mb-auto">
+
+        <li class="pl-4">
+            <a href="#" class="nav-link text-white " data-bs-toggle="collapse" href="#collapseHistory" role="button" aria-expanded="false" aria-controls="collapseHistory">
+                <i class="fas fa-chevron-down"></i> Historial
+            </a>
+
+            <div class="collapse show navbar-collapse" id="collapseHistory">
+                <ul id="" class="navbar-nav mr-auto ">
+                    <li class="nav-item" *ngIf="historial.length <= 0">
+                        <a href="#" class="nav-link text-white m-0 p-0" style="margin-left:40px!important;">
+                            <p class="m-0 p-0">Sin resultados</p>
+                        </a>
+                    </li>
+                    <li class="nav-item" *ngFor="let item of historial" (click)="buscar(item)">
+                        <a href="#" class="nav-link text-white m-0 p-0" style="margin-left:40px!important;">
+                            <p class="m-0 p-0">{{item | titlecase}}</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+
+</div>

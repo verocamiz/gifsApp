@@ -1,0 +1,18 @@
+<!-- <ul>
+    <li *ngFor="let gif of resultados">
+        {{gif.title}}
+    </li>
+</ul> -->
+
+<div class="row">
+    <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn animate__fast" *ngFor="let gif of resultados">
+        <div class="card">
+            <!-- con los [] le digo que angular se va a encargar de llenar el valor con sus propiedades -->
+            <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
+            <div class="card-body">
+                <!-- <p class="card-text">{{gif.title}}</p>
+                {{gif.images.downsized_medium.url}} -->
+            </div>
+        </div>
+    </div>
+</div>
